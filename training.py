@@ -62,6 +62,7 @@ def weekly_jubilars():
                     list_day_delta[0] = '31'                
                 if int(list_data[0]) >= int(list_today[0]) and int(list_data[0]) <= int(list_day_delta[0]) and int(list_data[1]) == int(list_today[1]):
                     list_name.append(rez)
+                    
                     day_birth = True 
                 else:
                     day_birth = False                             
@@ -70,14 +71,19 @@ def weekly_jubilars():
             elif a == 'name': 
                 if day_birth == True:
                     list_name.append('Іменинник: '+str(b))
-                    
+
     print('____________________________________')
     print('')
                     
     if len(list_name) >0: 
-                  
+        count =1
+        print('Іменинники на цьому тижні:') 
+        print()        
         for f in list_name:
             print(f)
+            count +=1
+            if count%2 !=0:
+                print('__________________________________')
 
                 
                     
