@@ -1,7 +1,7 @@
 from datetime import date, datetime, timedelta
 users = [{'name': 'John', 'birthday': datetime(year=2001, month=12, day=29).date()}, {
-    'name': 'Mike', 'birthday': datetime(year=2002, month=12, day=28).date()},
-    {'name': 'Dilan', 'birthday': datetime(year=2003, month=12, day=26).date()},
+    'name': 'Mike', 'birthday': datetime(year=2002, month=12, day=29).date()},
+    {'name': 'Dilan', 'birthday': datetime(year=2003, month=12, day=29).date()},
     {'name': 'Robert', 'birthday': datetime(year=2004, month=12, day=27).date()}]
 
 
@@ -22,7 +22,7 @@ else:
     delta_time = 0
 
 # Вираховуємо реквізити остатнього дня аналізу юбілярів
-max_date_control = today + timedelta(7 + delta_time)
+max_date_control = today + timedelta(7+ delta_time)
 max_day_control = max_date_control.strftime('%A')
 max_month_control = max_date_control.strftime('%B')
 max_num_month_control = max_date_control.strftime('%m')
@@ -79,17 +79,17 @@ def get_birthdays_per_week():
                             elif list_date[5] == 'Friday':
                                 list_friday.append(list_date[3])
     if len(list_monday) >0:
-        print('Monday: ', list_monday)
+        print('Monday: ', ' , '.join(list_monday))
     if len(list_tuesday) > 0:
-        print('Tuesday: ', list_tuesday)
+        print('Tuesday: ', ' , '.join(list_tuesday))
     if len(list_wednesday) > 0:
-        print('Wednesday: ', list_wednesday)
+        print('Wednesday: ', ' , '.join(list_wednesday))
     if len(list_thursday) > 0:
-        print('Thursday: ', list_thursday)
+        print('Thursday: ', ' , '.join(list_thursday))
     if len(list_friday) > 0:
-        print('Friday: ', list_friday)
+        print('Friday: ', ' , '.join(list_friday))
 
-              
+ #Не вирішив проблемуБ якщо період аналізу охоплює поточний та наступний рік....             
                             
 
 
