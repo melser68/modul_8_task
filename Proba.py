@@ -1,2 +1,8 @@
-a = ['2004', '12','27']
-print(a, a[0])
+spisok = list()
+spisok.append('1')
+spisok.append('2')
+spisok.append('3')
+print(spisok)
+spisok.pop(-1)
+spisok.pop(1)
+print(spisok)
