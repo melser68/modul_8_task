@@ -1,8 +1,8 @@
 from datetime import date, datetime, timedelta
 users = [{'name': 'John', 'birthday': datetime(year=2001, month=12, day=29).date()}, {
     'name': 'Mike', 'birthday': datetime(year=2002, month=12, day=29).date()},
-    {'name': 'Dilan', 'birthday': datetime(year=2003, month=12, day=29).date()},
-    {'name': 'Robert', 'birthday': datetime(year=2004, month=12, day=27).date()}]
+    {'name': 'Dilan', 'birthday': datetime(year=2003, month=2, day=14).date()},
+    {'name': 'Robert', 'birthday': datetime(year=2004, month=2, day=13).date()}]
 
 
 # Вираховуємо реквізити сьогоднішньої дати
