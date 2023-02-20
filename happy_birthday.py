@@ -1,8 +1,9 @@
 from datetime import date, datetime, timedelta
-users = [{'name': 'John', 'birthday': datetime(year=2001, month=12, day=29).date()}, {
-    'name': 'Mike', 'birthday': datetime(year=2002, month=12, day=29).date()},
-    {'name': 'Dilan', 'birthday': datetime(year=2003, month=2, day=14).date()},
-    {'name': 'Robert', 'birthday': datetime(year=2004, month=2, day=13).date()}]
+
+users = [{'name': 'John', 'birthday': datetime(year=2001, month=12, day=23).date()}, {
+    'name': 'Mike', 'birthday': datetime(year=2002, month=12, day=22).date()},
+    {'name': 'Dilan', 'birthday': datetime(year=2003, month=12, day=24).date()},
+    {'name': 'Robert', 'birthday': datetime(year=2004, month=2, day=20).date()}]
 
 
 # Вираховуємо реквізити сьогоднішньої дати
@@ -38,13 +39,16 @@ while data_list < max_date_control:
 
 
 def get_birthdays_per_week():
-    old_day = ''
+    
     list_monday = list()
     list_tuesday = list()
     list_wednesday = list()
     list_thursday = list()
     list_friday = list()
+    #Словник ключ день тижня - значення список корист які попали у цей день
     for i in users:
+        print(i['name'], i['birthday'].dayofweek)
+        # Зібрати словник ключ день тижня занчення список попавшщих юз + день тижня як ключ
         for key, value in i.items():
             if key == 'name':
                 name = value
